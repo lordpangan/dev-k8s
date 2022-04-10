@@ -4,5 +4,3 @@ resources:
 - github.com/argoproj/argo-workflows/manifests/quick-start/minimal
 - ingress.yaml
 - workflows
-
-namespace: argo
