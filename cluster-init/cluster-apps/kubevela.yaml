@@ -1,9 +1,17 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: vela-system
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kubevela
   namespace: argocd
 spec:
+  syncPolicy:
+    automated:
+      selfHeal: true
   project: default
   source:
     chart: vela-core
