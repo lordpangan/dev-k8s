@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kubevela
+  namespace: argocd
+spec:
+  project: default
+  source:
+    chart: vela-core
+    repoURL: https://charts.kubevela.net/core
+    targetRevision: 1.3.2
+    helm:
+      releaseName: kubevela
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: vela-system
