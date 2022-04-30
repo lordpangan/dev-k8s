@@ -33,6 +33,11 @@ Access argocd https://localhost/argo.
 kubectl apply -f cluster-init/cluster-apps/kubevela.yaml
 ```
 
+### To install Reloader
+```
+kubectl apply -f cluster-init/cluster-apps/reloader.yaml
+```
+
 ## To Clean Up
 ```
 kind delete cluster --name cluster1
